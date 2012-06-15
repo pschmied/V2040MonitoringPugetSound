@@ -1,0 +1,105 @@
+#+TITLE: Vision 2040 Monitoring -- Mode Split
+#+AUTHOR:
+#+LATEX: \usepackage{verbatim}
+#+LATEX: \clearpage
+
+
+
+* Measure Summary
+** Measure: T-5 Mode Split
+Identifies the proportion of users traveling to work via several modes
+
+** Benchmark
+Decreasing percentage of travelers commuting by driving alone
+
+** Data
+- Data needed: :: US Census, Decennial Census are used for historical trends prior to 2006. From 2006 onward, yearly estimates from the US Census's American Community Survey are used.
+- Data source: :: US Census, American Community Survey one-year estimates
+- Data collection geography: :: Seattle-Tacoma-Bellevue Metropolitan Statistical Area, plus Kitsap County
+- Data years(s): :: Historic decennial Census data available from 1960-2010; Yearly ACS estimates available from 2006 onward.
+- Data caveats: :: ACS data are estimates with margins of error. These data measure mode split at the person level, rather than at the trip level.
+
+** Reporting Geography
+Mode split will be reported at the regional level (King, Kitsap, Pierce, and Snohomish Counties).
+
+** Reporting Frequency
+- Base year/period: :: 2006
+- Reporting year/period: :: five-year
+- Update frequency: :: Minor updates annually; major updates every five years
+
+** Additional Notes
+The data chosen for this measure report the proportion of commuters traveling by a given mode. A more ideal measure of mode split would account for all types of trips, rather than commute trips only. While less applicable to commute trips, the total number of trips by mode would provide another useful basis to assess mode split. However, the Census American Community Survey data were chosen due to their reliable update frequency and their compatibility with historic decennial Census measures.
+
+** Work Estimate
+This measure represents a moderate investment of staff and time resources. Calculating mode splits is straightforward, however American Community Survey data require margins of error to be recalculated. In addition, there is currently no simple, automated way of downloading information from the U.S. Census.
+
+** Priority
+This is a confirmed (priority 1) measure.
+
+* Measure Analysis
+** Data Analysis
+ - American Community Survey data are estimates; margins of error are shown as a gray band in plots
+
+
+** Background Context
+VISION 2040 contains several multi-county planning policies that relate to mode split these include:
+
+- *MPP-T-3:** Reduce the need for new capital improvements through investments in operations, pricing programs, demand management strategies, and system management activities that improve the efficiency of the current system.
+
+- *MPP-T-5:** Foster a less polluting system that reduces the negative effects of transportation infrastructure and operation on the climate and natural environment.
+
+- *MPP-T-11:** Prioritize investments in transportation facilities and services in the urban growth area that support compact, pedestrian- and transit-oriented densities and development.
+
+- *MPP-T-14:** Design, construct, and operate transportation facilities to serve all users safely and conveniently, including motorists, pedestrians, bicyclists, and transit users, while accommodating the movement of freight and goods, as suitable to each facility’s function and context as determined by the appropriate jurisdictions.
+
+- *MPP-T-15:** Improve local street patterns--including their design and how they are used--for walking, bicycling, and transit use to enhance communities, connectivity, and physical activity.
+
+- *MPP-T-16:** Promote and incorporate bicycle and pedestrian travel as important modes of transportation by providing facilities and reliable connections.
+
+- *MPP-T-23:** Emphasize transportation investments that provide and encourage alternatives to single-occupancy vehicle travel and increase travel options, especially to and within centers and along corridors connecting centers.
+
+- *MPP-T-24:** Increase the proportion of trips made by transportation modes that are alternatives to driving alone.
+
+- *MPP-T-32:** Integrate transportation systems to make it easy for people and freight to move from one mode or technology to another.
+
+
+#+LATEX: \clearpage
+* Measure Production
+** Primary Graphic
+#+name: mode-splits-all
+#+CAPTION: Percentage of commuters, by mode of travel
+#+begin_src R :session mode-split :exports results :results graphics :file ./figures/mode-splits-all.png :width 700 :height 550
+  source("./ModeSplit.R")
+  pAllModes
+#+end_src
+
+
+#+LATEX: \clearpage
+** Supplemental Graphics
+#+name: mode-splits-drive-alone
+#+CAPTION: Percentage of commuters driving alone
+#+begin_src R :session mode-split :exports results :results graphics :file ./figures/mode-splits-drive-alone.png :width 530 :height 550
+  source("./ModeSplit.R")
+  pDroveAlone
+#+end_src
+
+#+name: mode-splits-no-drive-alone
+#+CAPTION: Percentage of commuters not driving alone, by mode of travel
+#+begin_src R :session mode-split :exports results :results graphics :file ./figures/mode-splits-no-drove-alone.png :width 700 :height 550
+  source("./ModeSplit.R")
+  pNoDroveAlone
+#+end_src
+
+
+#+LATEX: \begin{comment}
+#+name: mode-splits-interactive
+#+CAPTION: Percentage of commuters not driving alone, by mode of travel
+#+BEGIN_SRC R :exports results :results output html
+  source("./ModeSplit.R")
+  print(pInteractive)
+#+end_src
+
+#+RESULTS:
+[[file:./figures/mode-splits-interactive.html]]
+
+#+LATEX: \end{comment}

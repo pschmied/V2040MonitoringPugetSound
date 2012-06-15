@@ -1,0 +1,18 @@
+This directory contains data downloaded from the US Census. My view is that it is generally better to automate the download of data from its canonical source rather than pre-download the data. However, after battling the horror-show that is the American Factfinder 2, I am including the data downloads together with their URLs here.
+
+* ACS 1-year estimates Means of Transportation to Work (Table B08301)
+Each of these was downloaded manually through the American Factfinder 2 interface as a zip file containing separate data / annotations files.
+
+ACS_06_EST_B08301.zip:
+
+
+ACS_07_1YR_B08301.zip
+
+
+ACS_08_1YR_B08301.zip
+
+
+ACS_09_1YR_B08301.zip
+
+
+ACS_10_1YR_B08301.zip
