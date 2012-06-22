@@ -1,0 +1,127 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%! program = pdflatex
+
+%%%%% DOCUMENT SETUP %%%%%
+% Document class derives from "memoir" class
+\documentclass[10pt, letterpaper, final, twoside, onecolumn, article]{memoir}% For most reports; chapters look like section headers
+%\documentclass[10pt, letterpaper, final, twoside, onecolumn]{memoir}% For book-like reports with separate chapters
+
+%% for inline R code: if the inline code is not correctly parsed, you will see a message
+\newcommand{\rinline}[1]{SOMETHING WRONG WITH knitr}
+
+%% begin.rcode setup, include=FALSE
+% opts_chunk$set(fig.path='figure/latex-', cache.path='cache/latex-')
+% source('ModeSplit.R')
+%% end.rcode
+
+% Useful packages
+\usepackage{psrc}
+\usepackage{lipsum}
+\usepackage{soul}
+%\usepackage[notes,strict,backend=bibtex8,babel=other,bibencoding=inputenc,doi=false,isbn=false,url=false]{biblatex-chicago}% Chicago bibliography
+
+
+\title{Vision 2040 Monitoring\\{\LARGE T5 -- Mode Split}}
+\author{}
+\date{June 2015}
+
+%\bibliography{PSRC} %Wouldn't a curated, agency-wide bibliography database be swell?
+
+\begin{document}
+\maketitle
+
+%%%%% BEGIN DOCUMENT %%%%%
+
+\chapter{Measure T-5 Mode Split Summary}
+This measure reports the proportion of commuters driving alone to work as compared to other modes.
+
+\section{Benchmark}
+Decreasing percentage of travelers commuting by driving alone
+
+\section{Data} 
+\begin{description}
+  \item[Data needed:] US Census, Decennial Census are used for historical trends prior to 2006. From 2006 onward, yearly estimates from the US Census's American Community Survey are used.
+  \item[Data source:] US Census, American Community Survey one-year estimates
+  \item[Data collection geography:] Seattle-Tacoma-Bellevue Metropolitan Statistical Area, plus Kitsap County
+  \item[Data year(s):] Historic decennial Census data available from 1960-2010; Yearly ACS estimates available from 2006 onward.
+  \item[Data caveats:] ACS data are estimates with margins of error. These data measure mode split at the person level, rather than at the trip level.
+\end{description}
+
+
+\section{Reporting Geography}
+Mode split will be reported at the regional level (King, Kitsap, Pierce, and Snohomish Counties).
+
+\section{Reporting Frequency}
+\begin{description}
+  \item[Base year/period:] 2006
+  \item[Reporting year/period:] five-year
+  \item[Update frequency:] Minor updates annually; major updates every five years
+\end{description}
+
+\section{Additional Notes}
+The data chosen for this measure report the proportion of commuters traveling by a given mode. A more ideal measure of mode split would account for all types of trips, rather than commute trips only. While less applicable to commute trips, the total number of trips by mode would provide another useful basis to assess mode split. However, the Census American Community Survey data were chosen due to their reliable update frequency and their compatibility with historic decennial Census measures.
+
+\section{Work Estimate}
+This measure represents a moderate investment of staff and time resources. Calculating mode splits is straightforward, however American Community Survey data require margins of error to be recalculated. In addition, there is currently no simple, automated way of downloading information from the U.S. Census.
+
+\section{Priority}
+This is a confirmed (priority 1) measure.
+
+
+\clearpage
+\chapter{Measure Analysis}
+
+\section{Data Analysis}
+American Community Survey data are estimates; margins of error are shown as a gray band in plots
+
+\section{Background Context}
+VISION 2040 contains several multi-county planning policies that relate to mode split these include:
+
+\begin{description}
+\item[MPP-T-3:] Reduce the need for new capital improvements through investments in operations, pricing programs, demand management strategies, and system management activities that improve the efficiency of the current system.
+
+\item[MPP-T-5:] Foster a less polluting system that reduces the negative effects of transportation infrastructure and operation on the climate and natural environment.
+
+\item[MPP-T-11:] Prioritize investments in transportation facilities and services in the urban growth area that support compact, pedestrian- and transit-oriented densities and development.
+
+\item[MPP-T-14:] Design, construct, and operate transportation facilities to serve all users safely and conveniently, including motorists, pedestrians, bicyclists, and transit users, while accommodating the movement of freight and goods, as suitable to each facility’s function and context as determined by the appropriate jurisdictions.
+
+\item[MPP-T-15:] Improve local street patterns--including their design and how they are used--for walking, bicycling, and transit use to enhance communities, connectivity, and physical activity.
+
+\item[MPP-T-16:] Promote and incorporate bicycle and pedestrian travel as important modes of transportation by providing facilities and reliable connections.
+
+\item[MPP-T-23:] Emphasize transportation investments that provide and encourage alternatives to single-occupancy vehicle travel and increase travel options, especially to and within centers and along corridors connecting centers.
+
+\item[MPP-T-24:] Increase the proportion of trips made by transportation modes that are alternatives to driving alone.
+
+\item[MPP-T-32:] Integrate transportation systems to make it easy for people and freight to move from one mode or technology to another.
+\end{description}
+
+
+\clearpage
+\chapter{Measure Production}
+\section{Primary Graphic}
+
+%% begin.rcode allmodes, dev=c('pdf','png'), results='asis', echo=FALSE, fig.pos="htdp", fig.width=5, fig.height=4, out.width='\\textwidth', fig.cap="Proportion of commuters, by travel mode"
+% pAllModes
+%% end.rcode
+
+
+\section{Supplemental Graphics}
+%% begin.rcode drivealone, dev=c('pdf','png'), results='asis', echo=FALSE, fig.pos="htdp", fig.width=5, fig.height=4, out.width='\\textwidth', fig.cap="Proportion of commuters driving alone"
+% pDroveAlone
+%% end.rcode
+
+%% begin.rcode notdrivealone, dev=c('pdf','png'), results='asis', echo=FALSE, fig.pos="htdp", fig.width=5, fig.height=4, out.width='\\textwidth', fig.cap="Proportion of commuters not driving alone, by travel mode"
+% pNoDroveAlone
+%% end.rcode
+
+\clearpage
+\section{Links to Other PSRC Website Pages}
+
+\section{Links to External Website Resources/Pages}
+
+
+
+\end{document}
