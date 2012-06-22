@@ -18,5 +18,5 @@ An example, purely for fun
 
 ```{r results='asis', echo=FALSE, message=FALSE, tidy=FALSE}
 source('ModeSplit.R')
-print(pInteractive)
+print(pInteractive, 'chart')
 ```

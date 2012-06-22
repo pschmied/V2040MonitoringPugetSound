@@ -17,7 +17,7 @@ An example, purely for fun
 ----------------------------
 
 <!-- MotionChart generated in R 2.15.0 by googleVis 0.2.16 package -->
-<!-- Fri Jun 22 13:47:54 2012 -->
+<!-- Fri Jun 22 13:52:50 2012 -->
 
 
 <!-- jsHeader -->
@@ -26,7 +26,7 @@ An example, purely for fun
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMotionChartID7c051bfa22dc ()
+function gvisDataMotionChartID7c757bafd56d ()
 {
   var data = new google.visualization.DataTable();
   var datajson =
@@ -283,8 +283,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartMotionChartID7c051bfa22dc() {
-  var data = gvisDataMotionChartID7c051bfa22dc();
+function drawChartMotionChartID7c757bafd56d() {
+  var data = gvisDataMotionChartID7c757bafd56d();
   var options = {};
 options["width"] =    900;
 options["height"] =    600;
@@ -299,7 +299,7 @@ options["showYScalePicker"] = false;
 options["showAdvancedPanel"] = true;
 
      var chart = new google.visualization.MotionChart(
-       document.getElementById('MotionChartID7c051bfa22dc')
+       document.getElementById('MotionChartID7c757bafd56d')
      );
      chart.draw(data,options);
     
@@ -308,14 +308,14 @@ options["showAdvancedPanel"] = true;
   
  
 // jsDisplayChart 
-function displayChartMotionChartID7c051bfa22dc()
+function displayChartMotionChartID7c757bafd56d()
 {
   google.load("visualization", "1", { packages:["motionchart"] }); 
-  google.setOnLoadCallback(drawChartMotionChartID7c051bfa22dc);
+  google.setOnLoadCallback(drawChartMotionChartID7c757bafd56d);
 }
  
 // jsChart 
-displayChartMotionChartID7c051bfa22dc()
+displayChartMotionChartID7c757bafd56d()
  
 <!-- jsFooter -->  
 //-->
@@ -323,7 +323,7 @@ displayChartMotionChartID7c051bfa22dc()
  
 <!-- divChart -->
   
-<div id="MotionChartID7c051bfa22dc"
+<div id="MotionChartID7c757bafd56d"
   style="width: 900px; height: 600px;">
 </div>
 

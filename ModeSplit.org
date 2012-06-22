@@ -1,7 +1,7 @@
 #+TITLE: Vision 2040 Monitoring -- Mode Split
 #+AUTHOR:
-#+LATEX: \usepackage{verbatim}
-#+LATEX: \clearpage
+#+DATE:
+#+OPTIONS: toc:nil
 
 
 
@@ -72,6 +72,9 @@ VISION 2040 contains several multi-county planning policies that relate to mode 
   source("./ModeSplit.R")
   pAllModes
 #+end_src
+
+#+RESULTS:
+[[file:./figures/mode-splits-all.png]]
 
 
 #+LATEX: \clearpage

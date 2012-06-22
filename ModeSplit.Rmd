@@ -79,7 +79,7 @@ Measure Production
 ------------------
 
 ### Primary Graphic
-```{r 'Percentage-of-commuters-by-mode', results='asis', echo=FALSE, message=FALSE, tidy=FALSE}
+```{r 'Percentage-of-commuters-by-mode', results='asis', echo=FALSE, message=FALSE, tidy=FALSE, fig.cap="Percentage of commuters, by mode"}
 pAllModes + opts(title = expression("Percentage of commuters, by mode"))
 ```
 
