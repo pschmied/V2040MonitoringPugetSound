@@ -1,0 +1,92 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%! program = pdflatex
+
+%%%%% DOCUMENT SETUP %%%%%
+% Document class derives from "memoir" class
+\documentclass[10pt, letterpaper, final, twoside, onecolumn, article]{memoir}% For most reports; chapters look like section headers
+%\documentclass[10pt, letterpaper, final, twoside, onecolumn]{memoir}% For book-like reports with separate chapters
+
+%% for inline R code: if the inline code is not correctly parsed, you will see a message
+\newcommand{\rinline}[1]{SOMETHING WRONG WITH knitr}
+
+%% begin.rcode setup, include=FALSE
+% opts_chunk$set(fig.path='figure/latex-', cache.path='cache/latex-')
+% source('ModeSplit.R')
+%% end.rcode
+
+% Useful packages
+\usepackage{psrc}
+\usepackage{lipsum}
+\usepackage{soul}
+%\usepackage[notes,strict,backend=bibtex8,babel=other,bibencoding=inputenc,doi=false,isbn=false,url=false]{biblatex-chicago}% Chicago bibliography
+
+
+\title{Vision 2040 Monitoring\\{\LARGE T1c -- Bike and Trail Facilities}}
+\author{}
+\date{June 2015}
+
+%\bibliography{PSRC} %Wouldn't a curated, agency-wide bibliography database be swell?
+
+\begin{document}
+\maketitle
+
+%%%%% BEGIN DOCUMENT %%%%%
+
+\chapter{Measure T-1c Bike and Trail Facility Summary}
+This measure reports the proportion of commuters driving alone to work as compared to other modes.
+
+\section{Benchmark}
+Total length of bicycle and trail facilities is increasing; (discrete, disconnected portions decreasing)
+
+\section{Data} 
+\begin{description}
+  \item[Data needed:] Existing bicycle facilities in geospatial format
+  \item[Data source:] Jurisdictions; aggregated by PSRC
+  \item[Data collection geography:] Per jurisdiction
+  \item[Data year(s):] First comprehensive collection effort completed in 2012
+  \item[Data caveats:] Long collection period, may not be up-to-date at publication due to new implementation by jurisdictions
+\end{description}
+
+
+\section{Reporting Geography}
+Total length will be reported at the regional level (King, Kitsap, Pierce, and Snohomish Counties).
+
+\section{Reporting Frequency}
+\begin{description}
+  \item[Base year/period:] 2012
+  \item[Reporting year/period:] five-year
+  \item[Update frequency:] Annually
+\end{description}
+
+\section{Additional Notes}
+
+
+\section{Work Estimate}
+This measure represents a high investment of staff and time resources initially to collect data (complete or mostly complete). Ongoing data collection will require aggregation of data from all jurisdictions.
+
+\section{Priority}
+This is a confirmed (priority 1) measure.
+
+
+\clearpage
+\chapter{Measure Analysis}
+
+\section{Data Analysis}
+Total length of bicycle and trail facilities will be generated from agency geodatabase.
+
+\section{Background Context}
+
+
+\chapter{Measure Production}
+\section{Primary Graphic}
+
+\section{Supplemental Graphics}
+
+\section{Links to Other PSRC Website Pages}
+
+\section{Links to External Website Resources/Pages}
+
+
+
+\end{document}
