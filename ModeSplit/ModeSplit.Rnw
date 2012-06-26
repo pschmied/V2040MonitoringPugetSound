@@ -107,7 +107,7 @@ VISION 2040 contains several multi-county planning policies that relate to mode 
 % pAllModes
 %% end.rcode
 
-
+\clearpage
 \section{Supplemental Graphics}
 %% begin.rcode drivealone, dev=c('pdf','png'), results='asis', echo=FALSE, fig.pos="htdp", fig.width=5, fig.height=4, out.width='\\textwidth', fig.cap="Proportion of commuters driving alone"
 % pDroveAlone
